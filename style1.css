@@ -1,0 +1,273 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #222;
+    transition: 0.3s ease;
+}
+
+/* Dark Theme */
+body[dark-theme="dark"] {
+    background-color: #121212;
+    color: #f1f1f1;
+}
+
+body[dark-theme="dark"] .navbar {
+    background-color: #1e1e1e !important;
+}
+
+body[dark-theme="dark"] .card,
+body[dark-theme="dark"] .contact-section,
+body[dark-theme="dark"] footer {
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+    padding: 15px 30px;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.nav-link {
+    color: #333 !important;
+    margin-right: 10px;
+}
+
+body[dark-theme="dark"] .nav-link {
+    color: #fff !important;
+}
+
+#themeBtn {
+    padding: 5px 12px;
+    border: none;
+    background: #0d6efd;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* =========================
+   HOME SECTION
+========================= */
+#home {
+    padding: 80px 10%;
+}
+
+.hero img {
+    border: 5px solid #0d6efd;
+}
+
+.social-links a {
+    font-size: 20px;
+    margin: 0 10px;
+    color: #0d6efd;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: #000;
+}
+
+body[dark-theme="dark"] .social-links a:hover {
+    color: #fff;
+}
+
+/* =========================
+   ABOUT SECTION
+========================= */
+#about {
+    background-color: #f8f9fa;
+}
+
+body[dark-theme="dark"] #about {
+    background-color: #181818;
+}
+
+#about h2 {
+    margin-bottom: 20px;
+}
+
+/* =========================
+   SKILLS SECTION
+========================= */
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    padding: 25px;
+    width: 250px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    background: #fff;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.icon {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+/* =========================
+   PROJECTS SECTION
+========================= */
+#service {
+    background-color: #f1f3f5;
+}
+
+body[dark-theme="dark"] #service {
+    background-color: #181818;
+}
+
+#service .card-body {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+body[dark-theme="dark"] #service .card-body {
+    background: #222;
+}
+
+/* =========================
+   CONTACT SECTION
+========================= */
+.contact-section {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 60px 10%;
+    gap: 40px;
+    background: #f8f9fa;
+}
+
+body[dark-theme="dark"] .contact-section {
+    background: #181818;
+}
+
+.contact-left,
+.contact-right {
+    flex: 1;
+    min-width: 280px;
+}
+
+.info-item {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.contact-form textarea {
+    height: 120px;
+    resize: none;
+}
+
+.submit-btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    background: #0d6efd;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: #0b5ed7;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    background: #212529;
+    color: white;
+    padding: 20px 10%;
+    text-align: center;
+}
+
+footer nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer nav a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+    #home {
+        text-align: center;
+    }
+
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-section {
+        flex-direction: column;
+    }
+}
+
+/* Theme Toggle Button */
+#themeBtn {
+    padding: 6px 15px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.3s ease;
+    background-color: #222;
+    color: #fff;
+}
+
+/* Light Mode Button Style */
+body[dark-theme="light"] #themeBtn {
+    background-color: #222;
+    color: #fff;
+}
+
+/* Dark Mode Button Style */
+body[dark-theme="dark"] #themeBtn {
+    background-color: #f1f1f1;
+    color: #111;
+}
